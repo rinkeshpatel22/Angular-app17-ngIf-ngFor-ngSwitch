@@ -1,0 +1,17 @@
+h3{
+    padding: 10px;
+    background-color: #bbb;
+}
+span{
+    padding-left: 10px;
+}
+.oddElement{
+    color: blue;
+}
+.evenElement{
+    color: green;
+}
+.firstElement, .lastElement{
+    text-decoration: underline;
+    font-weight: bolder;
+}

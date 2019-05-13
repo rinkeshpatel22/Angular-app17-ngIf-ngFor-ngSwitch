@@ -1,0 +1,37 @@
+<!-- *ngIF -->
+<h3> *ngIf Example </h3>
+<div>
+  <button (click)="isDisplayMessage = !isDisplayMessage"> Click to <b>{{isDisplayMessage? 'Hide' : 'Show'}}</b>
+  </button>
+  <span *ngIf="isDisplayMessage"> Hello, This is *ngIf example </span>
+</div>
+
+<!-- *ngFor -->
+<h3> *ngFor Example</h3>
+<p *ngFor="let employee of emloyeeList">
+  <span>{{employee.name}} </span>
+</p>
+
+<h3> *ngFor Example with local variables</h3>
+<p *ngFor="let employee of emloyeeList; let i = index; let o=odd; let e=even; let f= first; let l=last" 
+    [ngClass]="{oddElement: o, evenElement: e, firstElement:f, lastElement:l}">
+  <span>{{i+1}}.</span>
+  <span>{{employee.name}} </span>
+</p>
+
+<!-- *ngSwitch -->
+<h3> *ngSwitch Example </h3>
+<select (change)="onSelectDay($event)">
+  <option value="">Select Day</option>
+  <option value="Friday">Friday</option>
+  <option value="Saturday">Saturday</option>
+  <option value="Sunday">Sunday</option>
+</select>
+<div [ngSwitch]="selectedDay">
+  <p *ngSwitchCase="'Friday'"> Friday selected</p>
+  <p *ngSwitchCase="'Saturday'"> Saturday selected</p>
+  <p *ngSwitchCase="'Sunday'"> Sunday selected</p>
+  <p *ngSwitchDefault> No Day selected</p>
+</div>
+
+
